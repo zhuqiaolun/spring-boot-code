@@ -1,5 +1,5 @@
-# spring-boot-code
-代码生成器，支持mybatis和mybatis-plus使用
+﻿# spring-boot-code
+代码生成器，同时支持mybatis和mybatis-plus使用
 
 参数说明：
 
