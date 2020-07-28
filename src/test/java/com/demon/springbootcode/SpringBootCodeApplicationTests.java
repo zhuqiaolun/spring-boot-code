@@ -22,10 +22,10 @@ class SpringBootCodeApplicationTests {
         String outputDir = FileSystemView.getFileSystemView().getHomeDirectory().getAbsolutePath()+ File.separator+"myCode"+ File.separator+ UUID.randomUUID().toString();
         //不填写则全部表，生成在桌面(自动弹出文件目录)
         String[] include = new String[]{"sys_user"};
-        String driverName = "com.mysql.jdbc.Driver";
-        String url = "jdbc:mysql://127.0.0.1:3306/test";
+        String driverName = "com.mysql.cj.jdbc.Driver";
+        String url = "jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&useSSL=false&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull";
         String username = "root";
-        String password = "123456";
+        String password = "root";
         String packageName = "com.demon";
         String moduleName = "springbootcode";
         MybatisPlusGenerator.getAutoGenerator(DbType.MYSQL, outputDir,include,driverName,url,username,password,moduleName,packageName);
